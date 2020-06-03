@@ -13,21 +13,29 @@ library(shiny)
 shinyUI(fluidPage(
 
     # Application title
-    titlePanel("Old Faithful Geyser Data"),
-
-    # Sidebar with a slider input for number of bins
+    titlePanel("Lung Disease Deaths in the UK"),
+    # Sidebar with a box input for line variables
     sidebarLayout(
         sidebarPanel(
-            sliderInput("bins",
-                        "Number of bins:",
-                        min = 1,
-                        max = 50,
-                        value = 30)
+            
+            "With the Covid-19 outbreak still affecting nations around the globe, respiratory and lung diseases are becoming major topics of interest. These charts provide a glimpse into 'normal' lung disease deaths in the UK, and help illustrate how completely unprecedented is Covid-19's death toll.",
+            
+            checkboxGroupInput(inputId = "lines",
+                        "Display:", choices = 
+                       c("Total", "Female", "Male"),
+                       selected = "Total",
+                       inline = FALSE),
+            selectInput(inputId = "pred", label="Predict Total to...", 
+                        choices=c("1985", "1990", "1995", "2000", "2005"), selected="1985"),
+            submitButton("Update Charts")
         ),
 
-        # Show a plot of the generated distribution
-        mainPanel(
-            plotOutput("distPlot")
-        )
+    # Show a plot of the generated line graph
+    mainPanel(
+        plotOutput("timePlot"),
+        plotOutput("predPlot"),
+        "R. Holley, June 3rd, 2020, Coursera/Johns Hopkins University Developing Data Products"
+    )
+
     )
 ))

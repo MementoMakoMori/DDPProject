@@ -8,10 +8,14 @@ Platform: x86_64-pc-linux-gnu (64-bit)
 Repo contents:
 DDP - ui.R
 DDP - server.R
+pitch-cache
+pitch-figure
+DDPProject.Rproj
 DESCRIPTION
 README
 pitch.Rpres
-pitch.Rmd
+pitch.md
+
 
 ui.R/server.R use the following R packages:
 shiny 1.4.0.2

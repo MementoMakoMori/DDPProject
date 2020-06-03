@@ -1,4 +1,5 @@
 June 3rd, 2020
+R. Holley
 
 This little shiny app was created for Coursera & Johns Hopkins University's Developing Data Products course, with Profs. Brian Caffo, Roger Peng, and Jeff Leek. It is by no means a very advanced project, but that is by design - the first few iterations I tried used a massive, comprehensive dataset from the CDC on US heath, and cleaning/organizing/modeling the data took a terrible toll on my PC. Eventually (for my poor RAM and for the purpose of running well on a server), I dumbed down the project to a much simpler, easily-accesible dataset (UKLungDeaths, in the R System Library datasets package).
 

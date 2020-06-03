@@ -15,7 +15,7 @@ DESCRIPTION
 README
 pitch.Rpres
 pitch.md
-
+pitch.html
 
 ui.R/server.R use the following R packages:
 shiny 1.4.0.2
